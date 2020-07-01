@@ -3,7 +3,7 @@
   Documentation: https://elanthipedia.play.net/Lich_script_development#common-items
 =end
 
-$TRASH_STORAGE = %w[bin gloop barrel bucket urn log arms stump tree statue]
+$TRASH_STORAGE = %w[basket bin gloop barrel bucket urn log arms stump tree statue chamberpot]
 
 custom_require.call(%w[common common-travel])
 
@@ -70,6 +70,12 @@ module DRCI
       if trashcan == 'gloop'
         trashcan = 'bucket' if DRRoom.room_objs.include? 'bucket of viscous gloop'
         trashcan = 'cauldron' if DRRoom.room_objs.include? 'small bubbling cauldron of viscous gloop'
+      elsif trashcan == 'bucket'
+        trashcan = 'sturdy bucket' if DRRoom.room_objs.include? 'sturdy bucket'
+      elsif trashcan == 'basket'
+        trashcan = 'waste basket' if DRRoom.room_objs.include? 'waste basket'
+      elsif trashcan == 'bin'
+        trashcan = 'waste bin' if DRRoom.room_objs.include? 'waste bin'
       elsif trashcan == 'arms'
         trashcan = 'statue'
       elsif trashcan == 'tree'
@@ -151,7 +157,7 @@ module DRCI
   end
 
   def count_lockpick_container(container)
-    count = DRC.bput("app my lockpick #{container}", 'and it appears to be full', 'and it might hold an additional \d+', '\d+ lockpicks would probably fit').scan(/\d+/).first.to_i
+    count = DRC.bput("app my #{container}", 'and it appears to be full', 'and it might hold an additional \d+', '\d+ lockpicks would probably fit').scan(/\d+/).first.to_i
     waitrt?
     count
   end
@@ -174,7 +180,7 @@ module DRCI
 
     count.times do
       buy_item(room, "#{lockpick_type} lockpick")
-      DRC.bput("put my lockpick on my lockpick #{container}", 'You put')
+      DRC.bput("put my lockpick on my #{container}", 'You put')
     end
 
     # Be polite to Thieves, who need the room to be empty

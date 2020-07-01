@@ -56,6 +56,53 @@ blacksmithing:
     idle-room: 8775
   Leth Deriel:
     << : *zoluren_blacksmithing
+  Volcano:
+    npc: Borneas
+    npc_last_name: Borneas
+    npc-rooms:
+      - 19_252
+      - 19_249
+      - 19_255
+      - 19_243
+      - 19_246
+      - 9005
+      - 19_258
+      - 19_211
+      - 19_261
+      - 19_264
+      - 50_270
+      - 19_267
+    anvils:
+      - 19_252
+      - 19_211
+      - 19_267
+      - 50_270
+    crucibles:
+      - 19_249
+      - 19_255
+      - 19_258
+      - 19_261
+      - 19_264
+    grindstones:
+      - 19_261
+      - 19_255
+      - 19_267
+      - 50_270
+      - 19_252
+    logbook: forging
+    pattern-book: blacksmithing
+    finisher: oil
+    finisher-full: flask of oil
+    finisher-room: 19246
+    finisher-number: 6
+    repair-room: 19246
+    repair-npc: clerk
+    stock-volume: 5
+    stock-room: 19243
+    stock-number: 11
+    stock-name: bronze ingot
+    trash-room: 19264
+    idle-room: 19246
   Muspar'i:
     npc: Master
     npc_last_name: Master
@@ -1028,7 +1075,7 @@ artificing:
     repair-npc: Unspiek
     trash-room: 14767
     idle-room: 14770
-  Shard:
+  Shard:  &ilithi_artificing
     npc: Trainer
     npc_last_name: Trainer
     npc-rooms:
@@ -1073,6 +1120,30 @@ artificing:
     repair-npc: clerk
     trash-room: 14792
     idle-room: 14788
+  Hibarnhvidar:
+    npc: Trainer
+    npc_last_name: Trainer
+    npc-rooms:
+    - 15519
+    - 15520
+    - 15521
+    - 15522
+    - 15523
+    - 15524
+    logbook: enchanting
+    stock-room: 15523
+    brazier-rooms:
+    - 15526
+    - 15525
+    - 15527
+    - 15528
+    tool-room: 15522
+    fount: 3
+    sigil-book: 5
+    blank-scrolls: 8
+    repair-room: 8887
+    repair-npc: clerk
+    idle_room: 15520    
 deeds:
   Crossing: &zoluren_deeds
     room: 8775
@@ -1708,10 +1779,10 @@ recipe_parts:
       part-room: 14773
       part-number:
     Hibarnhvidar:
-      part-room: 14773 # Shard
+      part-room: 15523 # Hibarnhvidar
       part-number:
     Boar Clan:
-      part-room: 14773 # Shard
+      part-room: 15523 # Hibarnhvidar
       part-number: 
     Fang Cove:
       part-room: 14784
@@ -1724,10 +1795,10 @@ recipe_parts:
       part-room: 14773
       part-number:
     Hibarnhvidar:
-      part-room: 14773 # Shard
+      part-room: 15523 # Hibarnhvidar
       part-number:
     Boar Clan:
-      part-room: 14773 # Shard
+      part-room: 15523 # Hibarnhvidar
       part-number: 
     Fang Cove:
       part-room: 14784
@@ -1740,10 +1811,10 @@ recipe_parts:
       part-room: 14773
       part-number:
     Hibarnhvidar:
-      part-room: 14773 # Shard
+      part-room: 15523 # Hibarnhvidar
       part-number:
     Boar Clan:
-      part-room: 14773 # Shard
+      part-room: 15523 # Hibarnhvidar
       part-number: 
     Fang Cove:
       part-room: 14784
@@ -1756,10 +1827,10 @@ recipe_parts:
       part-room: 14773
       part-number:
     Hibarnhvidar:
-      part-room: 14773 # Shard
+      part-room: 15523 # Hibarnhvidar
       part-number:
     Boar Clan:
-      part-room: 14773 # Shard
+      part-room: 15523 # Hibarnhvidar
       part-number: 
     Fang Cove:
       part-room: 14784
@@ -1772,10 +1843,10 @@ recipe_parts:
       part-room: 14773
       part-number:
     Hibarnhvidar:
-      part-room: 14773 # Shard
+      part-room: 15523 # Hibarnhvidar
       part-number:
     Boar Clan:
-      part-room: 14773 # Shard
+      part-room: 15523 # Hibarnhvidar
       part-number:
     Fang Cove:
       part-room: 14784

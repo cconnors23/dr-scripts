@@ -3579,6 +3579,14 @@ crafting_recipes:
   chapter: 2
   part:
   - hilt
+- name: a metal nimsha
+  noun: nimsha
+  volume: 8
+  type: weaponsmithing
+  work_order: false
+  chapter: 2
+  part:
+  - hilt
 - name: a metal throwing dagger
   noun: dagger
   volume: 2
@@ -4753,7 +4761,7 @@ crafting_recipes:
   noun: salve
   volume: 1
   type: remedies
-  work_order: false
+  work_order: true
   chapter: 3
   container: mortar
   herb1: nemoih
